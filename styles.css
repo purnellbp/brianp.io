@@ -1,0 +1,255 @@
+body {
+    background-color: #222222;
+    background-image: url("img/scanlines.png");    
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 100%;
+    font-family: monospace;
+    color: #BBBBBB;
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    text-shadow: 0 0 3px #fff;
+    letter-spacing: 1px;
+    animation: scrollBackground 20s linear infinite; 
+}
+
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-top: 0;
+    animation: flicker 0.05s infinite alternate;
+}
+
+p {
+    margin-bottom: 1.5em;
+    animation: flicker 0.05s infinite alternate-reverse;
+    text-shadow: none;
+    letter-spacing: normal;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-bottom: 1px;
+}
+
+a:hover {
+    color: #BBBBBB;
+}
+
+a:active {
+    color: #FFFFFF;
+}   
+
+a:visited {
+    color: #FFFFFF;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 100%);
+    z-index: -1;
+}
+
+.icon {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.header {
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    /* border-top: 1px solid #FFFFFF; */
+    /* border-bottom: 1px solid #FFFFFF; */
+    margin-bottom: 1.5em;
+    font-size: 24px;
+    z-index: 3; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 80;
+}
+
+.header a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.header nav {
+    display: flex;
+    
+}
+
+.header nav a {
+    padding: 0 0.5em;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    color: #BBBBBB;
+}
+
+.header nav a:after {
+    content: "|";
+    padding-left: 0.5em;
+    color: #BBBBBB;
+}
+
+.header nav a:last-child:after {
+    content: "";
+}
+
+@keyframes blink {
+    50% { border-color: transparent}
+}
+
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 18px;
+    border-left: 2px solid;
+    animation: blink 0.7s infinite;
+}
+.header nav {
+    display: flex;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    font-size: 18px;
+    z-index: 4;
+}
+
+.current-page {
+    text-align: left;
+}
+
+.date-time {
+    text-align: right;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: center 0%;
+    }
+    100% {
+        background-position: center 100%;
+    }
+}
+
+#content {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin-bottom: 20dvh;
+}
+
+.hidden {
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(-100px);
+    transition: all 2s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.img-filter{
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.usmc{
+    background-image: url("/img/usmc.png");
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+}
+
+
