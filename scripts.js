@@ -32,7 +32,7 @@ const typingDescription =
   "team leadership, and project management. " + 
   "<br>" + 
   "He is currently employed at " + 
-  "<a href='https://www.integritywireline.com/' target='_blank'>Integrity Wireline</a>. " +
+  "<a href='https://www.alamoairbone.com/' target='_blank'>Alamo Airborne</a>. " +
   "<br>" + 
   "<br>" + 
   "<br>" + 
